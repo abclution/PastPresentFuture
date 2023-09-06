@@ -32,8 +32,9 @@ seconds_per_day = 86400
 
 
 """
-# The Present, The Past & The Future of Bitcoin. 
-## A simulation of the economics and usability of Bitcoin as it is, as it was and as it will be.
+## Welcome to
+# The Past, The Present, & The Future of Bitcoin. 
+## A simulation & presentation of the economics and usability of Bitcoin as it was, as it is today, and as may be.
 
 
 This is meant as a tool for anyone who wants to simulate the economic & end user reality of Bitcoin(s) with an (somewhat) rigorous analysis of the most important aspects of Bitcoin. 

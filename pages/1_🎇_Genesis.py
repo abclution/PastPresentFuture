@@ -4,4 +4,4 @@ import numpy as np
 
 
 st.set_page_config(page_title="Genesis - The Past, The Present & The Future of Bitcoin.", page_icon="🚸",layout="wide")
-st.write(st.session_state["shared"])
+# st.write(st.session_state["shared"])

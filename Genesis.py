@@ -2,16 +2,27 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+
+st.set_page_config(page_title="Genesis - The Past, The Present & The Future of Bitcoin.", page_icon="📈",layout="wide")
+
+if "shared" not in st.session_state:
+   st.session_state["shared"] = True
+
+
+
+
+
+
 # from collections import namedtuple
 # import altair as alt
 # import math
 
 
-st.set_page_config(layout="wide")
+
+
+#st.set_page_config(layout="wide")
 # page1.py
 # import streamlit as st
-if "shared" not in st.session_state:
-   st.session_state["shared"] = True
 
 
 

@@ -4,7 +4,7 @@ import numpy as np
 
 
 st.set_page_config(page_title="The Present of Bitcoin.", page_icon="📈",layout="wide")
-st.write(st.session_state["shared"])
+# st.write(st.session_state["shared"])
 
 # from collections import namedtuple
 # import altair as alt

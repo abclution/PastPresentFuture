@@ -5,8 +5,8 @@ import numpy as np
 
 st.set_page_config(page_title="Home - The Past, The Present & The Future of Bitcoin.", page_icon="🏠",layout="wide")
 
-if "shared" not in st.session_state:
-    st.session_state["shared"] = True
+# if "shared" not in st.session_state:
+#     st.session_state["shared"] = True
 
 
 # past-present-and-future-of-bitcoin

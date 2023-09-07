@@ -5,10 +5,10 @@ import numpy as np
 
 st.set_page_config(page_title="Genesis - The Past, The Present & The Future of Bitcoin.", page_icon="🎇",layout="wide")
 # st.write(st.session_state["shared"])
-"""# Genesis"""
+"""# Darkness"""
 
 """
-In the inception of our tale, the stage was set with the existence of Fiat currencies, colloquially known as "Money by Decree." Paper and near worthless value metal coins, serving as mere symbols of wealth and value, mandated for use by the populace in their everyday transactions.
+In the inception of our tale, the stage was set with the existence of Fiat currencies, colloquially known as "Money by Decree." Near worthless value metal coins & paper, serving as mere symbols of wealth and value, mandated for use by the populace in their everyday transactions.
 
 For those who grasped the profound realities surrounding Fiat currencies, they wisely allocated their wealth into tangible assets such as land and precious metals like gold. Yet, the inconvenience of lugging around sacks of gold ranged from bothersome when purchasing a simple coffee to utterly impractical when buying from Amazon or paying for Netflix subscriptions.
 
@@ -20,7 +20,7 @@ Nonetheless, amidst this quagmire of doubt and inconvenience, there remained no 
 """
 
 
-
+"""# Genesis"""
 col1, col2 = st.columns(2)
 
 with col1:

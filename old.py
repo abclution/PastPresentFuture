@@ -3,10 +3,8 @@ import pandas as pd
 import numpy as np
 
 
-st.set_page_config(page_title="The Future of Bitcoin. - The Past, The Present & The Future of Bitcoin.", page_icon="⏳",layout="wide")
+st.set_page_config(page_title="The Present of Bitcoin.", page_icon="📈",layout="wide")
 # st.write(st.session_state["shared"])
-
-
 
 # from collections import namedtuple
 # import altair as alt

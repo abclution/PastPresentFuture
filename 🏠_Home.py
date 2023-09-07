@@ -55,6 +55,12 @@ This is meant as a tool for anyone who wants to simulate the economic & end user
 - Additionally the data used to derive the charts should be availiable in the tab next to each chart, as well as the formula used to derive the datasets.
 - The entirety of the source code used to generate this page is also available.
 
+#### Definitions
+
+In order to be effectively terse in the display of information and data, it is necessary to define some terms and some ideas.
+Please take a minute to read through the definitions in this section.
+If you are already highly familiar with Bitcoin, blockchain and related technologies, you can skip this section.
+
 """
 ###############################################################################
 st.sidebar.write(

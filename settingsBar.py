@@ -8,7 +8,7 @@ seconds_per_day = 86400
 
 
 def slider_tps_label():
-    st.sidebar.write(
+    st.write(
         '<font size="+5">Max. TPS',
         "</font>",
         "</br>",
@@ -22,7 +22,7 @@ def slider_tps_btc():
     #### BTC TPS SLIDER  ##########################################################
     format_slider_TPS = "%d"
     label_BTC_TPS = ":orange[BTC Network] *(Default: 7)*"
-    slider_BTC_TPS = st.sidebar.slider(label_BTC_TPS, 1, 7, 7, 1, format_slider_TPS)
+    slider_BTC_TPS = st.slider(label_BTC_TPS, 1, 7, 7, 1, format_slider_TPS)
 
     max_daily_transactions_BTC = seconds_per_day * slider_BTC_TPS
     return slider_BTC_TPS, max_daily_transactions_BTC
@@ -33,12 +33,36 @@ def slider_tps_bch():
     #### BCH TPS SLIDER  ##########################################################
     format_slider_TPS = "%d"
     label_BCH_TPS = ":green[BCH Network] *(Default: 224)*"
-    slider_BCH_TPS = st.sidebar.slider(label_BCH_TPS, 1, 10000, 224, 1, format_slider_TPS)
+    slider_BCH_TPS = st.slider(label_BCH_TPS, 1, 10000, 224, 1, format_slider_TPS)
 
     max_daily_transactions_BCH = seconds_per_day * slider_BCH_TPS
     return slider_BCH_TPS, max_daily_transactions_BCH
 
     # * USAGE: slider_BCH_TPS, max_daily_transactions_BCH = settingsBar.slider_tps_bch()
+
+
+
+# def slider_tps_btc():
+#     #### BTC TPS SLIDER  ##########################################################
+#     format_slider_TPS = "%d"
+#     label_BTC_TPS = ":orange[BTC Network] *(Default: 7)*"
+#     slider_BTC_TPS = st.sidebar.slider(label_BTC_TPS, 1, 7, 7, 1, format_slider_TPS)
+
+#     max_daily_transactions_BTC = seconds_per_day * slider_BTC_TPS
+#     return slider_BTC_TPS, max_daily_transactions_BTC
+
+#     # * USAGE: slider_BTC_TPS, max_daily_transactions_BTC = settingsBar.slider_tps_btc()
+
+# def slider_tps_bch():
+#     #### BCH TPS SLIDER  ##########################################################
+#     format_slider_TPS = "%d"
+#     label_BCH_TPS = ":green[BCH Network] *(Default: 224)*"
+#     slider_BCH_TPS = st.sidebar.slider(label_BCH_TPS, 1, 10000, 224, 1, format_slider_TPS)
+
+#     max_daily_transactions_BCH = seconds_per_day * slider_BCH_TPS
+#     return slider_BCH_TPS, max_daily_transactions_BCH
+
+#     # * USAGE: slider_BCH_TPS, max_daily_transactions_BCH = settingsBar.slider_tps_bch()
 
 
 

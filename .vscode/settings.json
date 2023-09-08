@@ -3,5 +3,6 @@
         "hashrate",
         "Segwit",
         "streamlit"
-    ]
+    ],
+    "editor.defaultFormatter": "mikoz.composite-formatter"
 }

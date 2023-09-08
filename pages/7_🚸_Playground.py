@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import settingsBar
+import comparisonTable
 
 st.set_page_config(page_title="The Playground - The Past, The Present & The Future of Bitcoin.", page_icon="🚸",layout="wide")
 # st.write(st.session_state["shared"])
@@ -24,16 +25,32 @@ with st.sidebar.expander("#### Energy Usage Settings"):
 
 with st.sidebar.expander("#### Price Settings"):
     settingsBar.slider_price_label()
-    slider_PriceBTC = settingsBar.slider_price_btc()
+    slider_PriceBTC = settingsBar.slider_price_btc(69.0, 69696969.0, 420.0, 10.0)
     slider_PriceBCH = settingsBar.slider_price_bch()
 
 
 with st.sidebar.expander("#### Block Reward Settings"):
     settingsBar.select_blockreward_label()
-    blockReward, totalDailyBlockRewards = settingsBar.select_blockreward()
+    blockReward, totalDailyBlockRewards = settingsBar.select_blockreward(index=4)
 
 with st.sidebar.expander("#### Chart Settings"):
     settingsBar.chart_settings_label()
     start_value, end_value, step = settingsBar.input_chart_settings_electricity()
 
 # ! SETTINGS SIDEBAR #########################################################
+
+
+comparisonTable.fullTable(slider_BTC_TPS,
+                          max_daily_transactions_BTC,
+                          slider_BCH_TPS,
+                          max_daily_transactions_BCH,
+                          slider_exaHashes_BTC,
+                          slider_exaHashes_BCH,
+                          energyUsageYearlyKwH_BTC,
+                          slider_energyUsageYearlyTwH_BTC,
+                          energyUsageYearlyKwH_BCH,
+                          energyUsageYearlyTwH_BCH,
+                          slider_PriceBTC,
+                          slider_PriceBCH,
+                          blockReward,
+                          totalDailyBlockRewards)

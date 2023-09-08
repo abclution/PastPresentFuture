@@ -2,10 +2,27 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import settingsBar
-import comparisonTable
 
-st.set_page_config(page_title="The Present of Bitcoin.", page_icon="📈",layout="wide")
+
+st.set_page_config(page_title="The Future of Bitcoin. - The Past, The Present & The Future of Bitcoin.", page_icon="⏳",layout="wide")
 # st.write(st.session_state["shared"])
+
+
+
+# from collections import namedtuple
+# import altair as alt
+# import math
+
+
+
+
+# page1.py
+# import streamlit as st
+# if "shared" not in st.session_state:
+#    st.session_state["shared"] = True
+
+
+
 
 colorBTC = "#F2A900"
 colorBCH = "#0AC18E"
@@ -33,6 +50,7 @@ with st.sidebar.expander("#### Price Settings"):
     slider_PriceBTC = settingsBar.slider_price_btc()
     slider_PriceBCH = settingsBar.slider_price_bch()
 
+
 with st.sidebar.expander("#### Block Reward Settings"):
     settingsBar.select_blockreward_label()
     blockReward, totalDailyBlockRewards = settingsBar.select_blockreward()
@@ -43,22 +61,10 @@ with st.sidebar.expander("#### Chart Settings"):
 
 # ! SETTINGS SIDEBAR #########################################################
 
-# ! MAIN START  ##############################################################
+#### MAIN START  #############################################################
 
-comparisonTable.fullTable(slider_BTC_TPS,
-                          max_daily_transactions_BTC,
-                          slider_BCH_TPS,
-                          max_daily_transactions_BCH,
-                          slider_exaHashes_BTC,
-                          slider_exaHashes_BCH,
-                          energyUsageYearlyKwH_BTC,
-                          slider_energyUsageYearlyTwH_BTC,
-                          energyUsageYearlyKwH_BCH,
-                          energyUsageYearlyTwH_BCH,
-                          slider_PriceBTC,
-                          slider_PriceBCH,
-                          blockReward,
-                          totalDailyBlockRewards)
+comparisonTable.fullTable(slider_BTC_TPS, max_daily_transactions_BTC, slider_BCH_TPS, max_daily_transactions_BCH, slider_exaHashes_BTC, slider_exaHashes_BCH, energyUsageYearlyKwH_BTC, slider_energyUsageYearlyTwH_BTC, energyUsageYearlyKwH_BCH, energyUsageYearlyTwH_BCH, slider_PriceBTC, slider_PriceBCH, blockReward, totalDailyBlockRewards)
+
 
 ###############################################################################
 st.divider()  # YEARLY - SECURITY BUDGET CHART AND TABLE

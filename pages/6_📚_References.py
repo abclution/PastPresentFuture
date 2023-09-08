@@ -7,7 +7,7 @@ st.set_page_config(page_title="References for The Past, The Present & The Future
 # st.write(st.session_state["shared"])
 
 
-
+# https://medium.com/@gianlucamazza/bitcoin-security-budget-halving-and-the-system-mechanics-306ca91c695f
 # https://dune.com/niftytable/bitcoin-security-budget
 # https://www.btcsecuritybudget.com/
 with st.expander("**Security Budget**", expanded=False):

@@ -9,7 +9,7 @@ st.set_page_config(page_title="References for The Past, The Present & The Future
 
 
 # https://dune.com/niftytable/bitcoin-security-budget
-
+# https://www.btcsecuritybudget.com/
 with st.expander("**Security Budget**", expanded=False):
     """
     ## Security Budget

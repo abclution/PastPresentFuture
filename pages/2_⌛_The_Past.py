@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-
+import stats
 
 st.set_page_config(page_title="The Past - The Past, The Present & The Future of Bitcoin.", page_icon="⌛",layout="wide")
 # st.write(st.session_state["shared"])
@@ -70,8 +70,8 @@ BTC_2009 = {
   "Halving Date": False,
   "Price Low": 0.0,
   "Price High": 0.0,
-  "Hashrate Low": 462.433/KiloHash,
-  "Hashrate High": format(12.5763/MegaHash,".20f"),
+  "Hashrate Low": format(462.433/KiloHash,".15f"),
+  "Hashrate High": format(12.5763/MegaHash,".16f"),
   "Price Halving Day": False,
   "Price 150 Days after Halving ": False,
   "Electricity Cost Low": .002,
@@ -82,4 +82,9 @@ BTC_2009 = {
 # format(BTC_MaxBillableBytes * BTC_SatoshisPerByte, ".8f")
 
 for key, value in BTC_2009.items():
+    st.write(key, value)
+
+
+
+for key, value in stats.BTC_2015.items():
     st.write(key, value)

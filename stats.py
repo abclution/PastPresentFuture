@@ -44,6 +44,14 @@
 # ExaHash: 1
 # ZettaHash: 0.001
 
+Hash = 1000000000000000000
+KiloHash = 1000000000000000
+MegaHash = 1000000000000
+GigaHash = 1000000000
+TeraHash = 1000000
+PetaHash = 1000
+ExaHash = 1
+ZettaHash = 0.001
 
 
 # https://www.zenledger.io/blog/bitcoin-halving/
@@ -54,8 +62,8 @@ BTC_2009 = {
   "Halving Date": False,
   "Price Low": 0.0,
   "Price High": 0.0,
-  "Hashrate Low": "462.433 kilohashes",
-  "Hashrate High": "12.5763 megahashes",
+  "Hashrate Low": format(462.433 / KiloHash, ".20f"),
+  "Hashrate High": format(12.5763 / GigaHash, ".20f"),
   "Price Halving Day": False,
   "Price 150 Days after Halving ": False,
   "Electricity Cost Low": .002,
@@ -69,8 +77,8 @@ BTC_2010 = {
   "Halving Date": False,
   "Price Low": 0.0,
   "Price High": 0.39,
-  "Hashrate Low": "11.57 megahashes",
-  "Hashrate High": "128.626 gigahashes",
+  "Hashrate Low": format(11.57 / MegaHash, ".20f"),
+  "Hashrate High": format(128.626 / GigaHash, ".20f"),
   "Price Halving Day": False,
   "Price 150 Days after Halving ": False,
   "Electricity Cost Low": .002,
@@ -84,8 +92,8 @@ BTC_2011 = {
   "Halving Date": False,
   "Price Low": .30,
   "Price High": 35.0,
-  "Hashrate Low": "118.021M ",
-  "Hashrate High": "15.842T",
+  "Hashrate Low": format(118.021 / GigaHash, ".20f"),
+  "Hashrate High": format(15.842 / TeraHash, ".20f"),
   "Price Halving Day": False,
   "Price 150 Days after Halving ": False,
   "Electricity Cost Low": .002,
@@ -100,8 +108,8 @@ BTC_2012 = {
   "Halving Date": "2012/11/28",
   "Price Low": 5.50,
   "Price High": 15.37,
-  "Hashrate Low": "8.68328T",
-  "Hashrate High": "29.1452T",
+  "Hashrate Low": format(8.68328 / TeraHash, ".20f"),
+  "Hashrate High": format(29.1452 / TeraHash, ".20f"),
   "Price Halving Day": 1,
   "Price 150 Days after Halving ": 1,
   "Electricity Cost Low": .002,
@@ -116,23 +124,22 @@ BTC_2013 = {
   "Halving Date": False,
   "Price Low": 13.57,
   "Price High": 1151,
-  "Hashrate Low": "24.33T",
-  "Hashrate High": "6.8813P",
+  "Hashrate Low": format(24.33 / TeraHash, ".20f"),
+  "Hashrate High": format(6.8813 / PetaHash, ".3f"),
   "Price Halving Day": False,
   "Price 150 Days after Halving ": False,
   "Electricity Cost Low": .002,
   "Electricity Cost High":.002,
   "Total Transactions Per Month": [349948463.0, 358912895.0, 449733638.0, 486638361.0, 555683473.0, 585521113.0, 643900214.0, 689099999.0, 717395620.0, 791424295.0, 816809857.0, 909918169.0]
   }
-Plywood8.Colonist.Regime.Collar
 BTC_2014 = {
   "Year": 2014,
   "Halving Year": False,
   "Halving Date": False,
   "Price Low": 	289.30,
   "Price High": 934.21,
-  "Hashrate Low": "11.345 P",
-  "Hashrate High": "331.8237 P",
+  "Hashrate Low": format(11.345/PetaHash, ".3f")",
+  "Hashrate High": format(331.8237/PetaHash, ".3f")",
   "Price Halving Day": False,
   "Price 150 Days after Halving ": False,
   "Electricity Cost Low": .002,
@@ -146,8 +153,8 @@ BTC_2015 = {
   "Halving Date": False,
   "Price Low": 171.51,
   "Price High": 495.56,	
-  "Hashrate Low": "267.3181 P",
-  "Hashrate High": "891.437 P",
+  "Hashrate Low": format(267.3181/PetaHash, ".3f"),
+  "Hashrate High": format(891.437/PetaHash, ".3f"),
   "Price Halving Day": False,
   "Price 150 Days after Halving ": False,
   "Electricity Cost Low": .002,

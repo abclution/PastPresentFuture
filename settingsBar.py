@@ -6,7 +6,7 @@ colorBTC = "#F2A900"
 colorBCH = "#0AC18E"
 seconds_per_day = 86400
 
-
+# * USAGE: settingsBar.slider_tps_label()
 def slider_tps_label():
     st.write(
         '<font size="+5">Max. TPS',

@@ -37,3 +37,5 @@ with st.expander("**Security Budget**", expanded=False):
     ### :red[Simply put, if the cost of the Expenditures is greater than the Income, the Miners are running at a loss & not making a profit.]
 
     """
+
+  

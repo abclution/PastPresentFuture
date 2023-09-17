@@ -7,6 +7,11 @@ import stats
 st.set_page_config(page_title="The Past - The Past, The Present & The Future of Bitcoin.", page_icon="⌛",layout="wide")
 # st.write(st.session_state["shared"])
 
+
+with open('style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
+
 # SOURCE: https://www.zenledger.io/blog/bitcoin-halving/
 """
 Bitcoin Halving Dates So Far
@@ -38,57 +43,8 @@ Price 150 Days Later: $10,943.00
 
 """Since Genesis, the birth of Bitcoin, a lot of time has passed. But some interesting history is contained in our past. Lets take a look at some of the most significant events in Bitcoin's history."""
 
-# Hash = 1000000000000000000
-# KiloHash = 1000000000000000
-# MegaHash = 1000000000000
-# GigaHash = 1000000000
-# TeraHash = 1000000
-# PetaHash = 1000
-# ExaHash = 1
-# ZettaHash = 0.001
-
-# BTC_2016 = {
-#   "Year": 2016,
-#   "Halving Year": True,
-#   "Halving Date": "2016/07/09",
-#   "Price Low": 354.91,
-#   "Price High": 979.40,
-#   "Hashrate Low": 704.5287/PetaHash,
-#   "Hashrate High": 901.8396/PetaHash,
-#   "Price Halving Day": 1,
-#   "Price 150 Days after Halving ": 1,
-#   "Electricity Cost Low": .002,
-#   "Electricity Cost High":.002,
-#   "Total Transactions Per Month": [3222667815.0, 3197059649.0, 3614175762.0, 3679821049.0, 4010506108.0, 4085450658.0, 4427875464.0, 4639959698.0, 4692856221.0, 5068934668.0, 5134596926.0, 5568056206.0]
-#   }
-
-# for key, value in BTC_2016.items():
-#     st.write(key, value)
-
-# BTC_2009 = {
-#   "Year": 2009,
-#   "Halving Year": False,
-#   "Halving Date": False,
-#   "Price Low": 0.0,
-#   "Price High": 0.0,
-#   "Hashrate Low": format(462.433/KiloHash,".15f"),
-#   "Hashrate High": format(12.5763/MegaHash,".16f"),
-#   "Price Halving Day": False,
-#   "Price 150 Days after Halving ": False,
-#   "Electricity Cost Low": .002,
-#   "Electricity Cost High":.002,
-#   "Total Transactions Per Month": [29068.0, 123819.0, 241866.0, 338216.0, 458489.0, 524159.0, 611848.0, 662271.0, 695197.0, 786238.0, 824272.0, 945146.0]
-#   }
-
-# # format(BTC_MaxBillableBytes * BTC_SatoshisPerByte, ".8f")
-
-# for key, value in BTC_2009.items():
-#     st.write(key, value)
-
-table = [stats.BTC_2009, stats.BTC_2010, stats.BTC_2011, stats.BTC_2012, stats.BTC_2013, stats.BTC_2014, stats.BTC_2015, stats.BTC_2016, stats.BTC_2017, stats.BTC_2018, stats.BTC_2019, stats.BTC_2020, stats.BTC_2021, stats.BTC_2022, stats.BTC_2023]
+BTCyearsTable = [stats.BTC_2009, stats.BTC_2010, stats.BTC_2011, stats.BTC_2012, stats.BTC_2013, stats.BTC_2014, stats.BTC_2015, stats.BTC_2016, stats.BTC_2017, stats.BTC_2018, stats.BTC_2019, stats.BTC_2020, stats.BTC_2021, stats.BTC_2022, stats.BTC_2023]
 months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-
-
 
 
 # for i in table:
@@ -102,11 +58,12 @@ months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", 
 
 #           else:     
 #             st.write(key, value)
+##############################################################################
 fontYear = '<font size ="+6">'
 fontPrice = '<font size ="+5">$'
 fontHashrate = '</br> <font size ="+5">'
 endfont = '</font>'
-for i in table:
+for i in BTCyearsTable:
 
     col1, col2 = st.columns(2)
     with col1:
@@ -124,8 +81,8 @@ for i in table:
         # st.write("Halving Occured in this Year? </br>", str(i["Halving Year"]), unsafe_allow_html=True)
         st.write("Halving Occured in this Year? </br>", halvingyear , unsafe_allow_html=True)
 
-        st.write("Lowest Hashrate (In Exahashes)", fontHashrate, str(i["Hashrate Low"]), endfont, unsafe_allow_html=True)
-        st.write("Highest Hashrate (In Exahashes) ", fontHashrate, str(i["Hashrate High"]), endfont, unsafe_allow_html=True)
+        st.write("Lowest Hashrate (In Exahashes)", fontHashrate, format(i["Hashrate Low"], ".16f"), endfont, unsafe_allow_html=True)
+        st.write("Highest Hashrate (In Exahashes) ", fontHashrate, format(i["Hashrate High"], ".16f"), endfont, unsafe_allow_html=True)
         
 
     col1, col2 = st.columns(2)
@@ -156,66 +113,88 @@ for i in table:
 
     st.divider()    
 
+##############################################################################
 
-# st.bar_chart(table[0]["Total Transactions Per Month"])
-# for key, value in stats.BTC_2009.items():
-#     st.write(key, value)
+transactions_FullTable = []
+date_FullTable = []
 
+for i in BTCyearsTable:
+    transactions_FullTable = transactions_FullTable + i["Total Transactions Per Month"]
 
-# for key, value in stats.BTC_2010.items():
-#     st.write(key, value)
+years = [(str(d["Year"])) for d in BTCyearsTable]
+newlist = [f"{month} {year}" for year in years for month in months]
 
-
-# for key, value in stats.BTC_2011.items():
-#     st.write(key, value)
-
-
-
-# for key, value in stats.BTC_2012.items():
-#     st.write(key, value)
+data = pd.DataFrame({
+    'Transactions': transactions_FullTable,
+    'Date': newlist
+})
 
 
-# for key, value in stats.BTC_2013.items():
-#     st.write(key, value)
+c = alt.Chart(data).mark_bar().encode(
+     x=alt.X('Date', sort=None),
+     y='Transactions')
+
+st.write("Bitcoin Years Table, mooo")
+st.altair_chart(c, use_container_width=True)
+
+##############################################################################
 
 
-# for key, value in stats.BTC_2014.items():
-#     st.write(key, value)
 
 
-# for key, value in stats.BTC_2015.items():
-#     st.write(key, value)
 
 
-# for key, value in stats.BTC_2016.items():
-#     st.write(key, value)
 
 
-# for key, value in stats.BTC_2017.items():
-#     st.write(key, value)
 
 
-# for key, value in stats.BTC_2018.items():
-#     st.write(key, value)
 
 
-# for key, value in stats.BTC_2019.items():
-#     st.write(key, value)
+
+t = stats.nasdaqDataExtract("data/dl/MIREV_Bitcoin_Miners_Revenue_USD_(DAILY).json")
+months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+data = pd.DataFrame({
+    'Data': t["2018"],
+    'Months': months
+})
 
 
-# for key, value in stats.BTC_2020.items():
-#     st.write(key, value)
+
+c = alt.Chart(data).mark_bar().encode(
+     x=alt.X('Months', sort=None),
+     y='Data')
+
+st.altair_chart(c, use_container_width=True)
+# st.write(t["2018"])
+
+###########################################
 
 
-# for key, value in stats.BTC_2021.items():
-#     st.write(key, value)
+
+t = stats.nasdaqDataExtract("data/dl/MIREV_Bitcoin_Miners_Revenue_USD_(DAILY).json")
+months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+data = pd.DataFrame({
+    'Data': t["2019"],
+    'Months': months
+})
 
 
-# for key, value in stats.BTC_2022.items():
-#     st.write(key, value)
+
+c = alt.Chart(data).mark_bar().encode(
+     x=alt.X('Months', sort=None),
+     y='Data')
+
+st.altair_chart(c, use_container_width=True)
+#st.write(t["2019"])
 
 
-# for key, value in stats.BTC_2023.items():
-#     st.write(key, value)
 
 
+
+# st.write(t["2019"][4])
+# st.write(t["2019"])
+
+
+# for i in t if t[0] == "2009"
+#     st.write(i)
+# # st.write(stats.nasdaqDataExtract("data/MIREV-Bitcoin Miners Revenue.json"))
